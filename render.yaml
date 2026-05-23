@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: africa-live-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: node index.js
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        value: AfricaLive2026SecretKey
+      - key: NODE_ENV
+        value: production
